@@ -1,0 +1,132 @@
+<div class="container-fluid">
+    <div class="row">
+        <div ng-include="'/static/' + uiver + '/navigation/navigation.view.html?v=' + ver"
+            ng-controller='NavigationController'>
+        </div>
+    </div>
+    <div class="row">
+        <div class="title-bar">
+            <a style="display:-webkit-box; cursor: pointer;">
+
+                <span class="title-text">Space/ {{spaceName}} / Overview</span>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div ng-include="'/static/' + uiver + '/leftmenu/leftmenu.view.html?v=' + ver"
+            ng-controller='LeftMenuController'>
+        </div>
+        <div class="contentcontainer col-xs-12" id="contentcontainer">
+            <div>
+                <div class="row">
+                    <div class="col-md-10 col-xs-10">
+                        <h1 class="nameattribute">Getting Started with Cloud Functions</h1>
+                    </div>
+                    <div class="col-md-2 col-xs-2" style="    padding-top: 37px;">
+                        <a href="#createoptions" role="button" style="background-color: #3d70b2;
+                            border: 12px solid transparent;
+                            color: #ffffff;
+                            margin-top: 55px;    color: white !important;">Start Creating</a>
+                    </div>
+                </div>
+
+                <div style="    margin-top: 0.625rem;">
+                    <p class="p1">Cloud Functions (based on Apache OpenWhisk) is a Function-as-a-Service (FaaS) platform
+                        which executes functions in response to incoming events and costs nothing when not in use.</p>
+                </div>
+
+
+                <div>
+                    <h4 class="nameattribute">* What's New:</h4>
+                </div>
+                <div><p class="p1">
+                    Updated action runtimes.
+                    Increased maximum memory for actions to 2048MB.
+                    Added support for monitoring the performance of your actions using metrics.
+                </p>
+                </div>
+                <div style="  ">
+                    <h4 class="nameattribute">Save costs, scale and integrate.</h4>
+                </div>
+                <div class="col-xs-12">
+
+                  
+                        <p class="p1"><strong>Cost-Effective Computing</strong>
+                            Pay for what time you use down to one-tenth of a second.
+                    </p>
+                    <p class="p1"><strong>Automatically Scale</strong>
+                        Run your action thousands of times in a fraction of a second, or once a week. Action instances scale to meet demand exactly, then disappear.
+                    </p>
+                    <p class="p1"><strong>Easy Integration</strong>
+                        Trigger your actions from events in your favorite services, or directly via REST API.
+
+                        
+                    </p>
+              
+            
+                </div>
+
+                <div style=" margin-top: 20px ">
+                    <h4 class="nameattribute">Runtimes</h4>
+                    <p class="p1">Work with what you already know and love. Develop your functions directly in one of the natively
+                    supported languages, or run code in any other language (including compiled Go, C, etc. binaries) by
+                    providing us with a Docker container.</p>
+                    <img src="/static/v2/assets/lamdt/images/runtimes.png" class="center-block img-responsive" alt="">
+                </div>
+                <div style=" margin-top: 20px ">
+                    <h4 class="nameattribute">What would I use Cloud Functions for?</h4>
+                    <p class="p1">Work with what you already know and love. Develop your functions directly in one of the natively
+                    supported languages, or run code in any other language (including compiled Go, C, etc. binaries) by
+                    providing us with a Docker container.</p>
+                    <p class="p1"><strong>Serverless Backends</strong>
+                        Expose application logic by implementing serverless microservices. Simply map your functions to
+                        well-defined API endpoints any client can call by making use of Web Actions or our latest API
+                        Gateway integration.</p>
+                    <p class="p1"><strong>Mobile Backend
+                        </strong>
+                        Allow mobile developers to easily access server-side logic and to outsource compute-intensive tasks to a scalable cloud platform. Let them implement functions in languages like Swift and easily consume server-side functions using our iOS SDK.</p>
+                    <p class="p1"><strong>Data Processing</strong>
+                        Execute code whenever data is updated in your datastore. Easily automate processes like audio normalization, image rotation, sharpening, noise reduction, thumbnail generation, or video transcoding.</p>
+                    <p class="p1"><strong>Cognitive Data Processing</strong>
+                        Analyze data as soon as it becomes available. </p>
+                    <p class="p1"><strong>IoT Ready
+                        </strong>
+                        React to and process IoT sensor data. Let any IoT device send data to our IoT platform and define cloud rules to call your functions and execute custom application logic.</p>
+                    <p class="p1"><strong>Event Stream Processing
+                        </strong>
+                        Process data in-motion and make your functions react to incoming messages.</p>
+                    <p class="p1"><strong>Conversational Scenarios
+                        </strong>
+                        Implement serverless conversational applications, like chatbots, by passing chat messages to your functions for further processing.</p>
+                    <p class="p1"><strong>Scheduled Tasks
+                        </strong>
+                        Execute your functions periodically. Define schedules following a cron-like syntax to specify when actions are supposed to be executed..</p>
+
+                        <img src="/static/v2/assets/lamdt/images/openwhisk-01.png" class="center-block img-responsive" alt="">
+                </div>
+                <hr>
+                <div style="    padding-top: 37px;     text-align: center;">
+                    <p class="p1" style="    font-size: 37px;
+                    color: #3d6fb2;">Try out Cloud Functions now</p><br>
+                    <div class="col-md-12 col-xs-12" >
+                            <a href="#createoptions" role="button" style="background-color: #3d70b2;
+                                border: 12px solid transparent;
+                                color: #ffffff;
+                                margin-top: 55px;    color: white !important;">Start Creating</a>
+                        </div>
+                    </div><br><br><br><br>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+<style>
+    .p1 {
+        color: black;
+        font-weight: 500;
+    }
+</style>

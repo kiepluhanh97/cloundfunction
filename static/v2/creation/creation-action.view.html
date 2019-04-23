@@ -1,0 +1,138 @@
+<div class="container-fluid">
+	<div class="row">
+		<div ng-include="'/static/' + uiver + '/navigation/navigation.view.html?v=' + ver"
+			ng-controller='NavigationController'>
+		</div>
+	</div>
+	<div class="row">
+		<div class="title-bar">
+			<a href="#space" style="display:-webkit-box; cursor: pointer;">
+
+				<span class="title-text">Create</span>
+			</a>
+			<!-- 
+			<div class="btn-group menu-action">
+				<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+					<span style="font-weight:700 !important;">Action</span>
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<ul class="dropdown-menu actiondetail" role="menu" style="margin-left: -80px;">
+					<li ng-class="statusCert=='ACTIVE'||statusCert=='REVOKED' ? 'disableClick':''"><a
+							ng-click="updateCert(cert,1)">Rename</a></li>
+					<li ng-class="statusCert=='INACTIVE'||statusCert=='REVOKED' ? 'disableClick':''"> <a
+							ng-click="updateCert(cert,0)">Block</a></li>
+					<li ng-class="statusCert=='REVOKED'?'disableClick':''"><a ng-click="updateCert(cert,2)">Active</a>
+					</li>
+					<li><a ng-click="attachPolicies(cert)">Delete</a></li>
+				</ul>
+			</div> -->
+			<!-- <div class="over-margin maps"></div> -->
+			<a style="cursor: pointer;" ng-click="autoAddNewVariable()" class="btnAdd" ng-show="viewVar">+</a>
+		</div>
+
+	</div>
+	<div class="row">
+		<div class="menucontainer left_col col-menu" id="menucontainer">
+			<div class="nav-side-menu">
+				<div class="brand">Namespace {{thisNamespace.id}}</div>
+				<i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+				<div class="menu-list">
+					<ul id="menu-content" class="menu-content collapse out">
+						<li>
+							&nbsp &nbsp <i class="far fa-folder fa-lg"></i><span> &nbsp &nbsp Documents</span>
+						</li>
+
+						<li ng-click="showCate(0)">
+							&nbsp &nbsp <i class="fas fa-info-circle fa-lg"></i><span> &nbsp &nbsp Details</span>
+						</li>
+
+						<li ng-click="showCate(1)">
+							&nbsp &nbsp <i class="fas fa-hand-point-up fa-lg"></i><span> &nbsp &nbsp Actions</span>
+						</li>
+
+						<li>
+							&nbsp &nbsp <i class="fas fa-bolt fa-lg"></i></i><span> &nbsp &nbsp Triggers</span>
+						</li>
+
+						<li>
+							&nbsp &nbsp <i class="fas fa-tv fa-lg"></i><span> &nbsp &nbsp Monitors</span>
+						</li>
+
+						<li>
+							&nbsp &nbsp <i class="fas fa-edit fa-lg"></i><span> &nbsp &nbsp Logs</span>
+						</li>
+
+						<li>
+							&nbsp &nbsp <i class="fas fa-link fa-lg"></i><span> &nbsp &nbsp APIs</span>
+						</li>
+
+						<!-- <li  data-toggle="collapse" data-target="#products" class="collapsed" ng-click="show1()">
+						<i class="fa fa-gift fa-lg"></i> UI Elements <span class="arrow"></span>
+					  </li>
+					  <ul class="sub-menu collapse" id="products" ng-show = "notshow1">
+						  <li><a href="#">CSS3 Animation</a></li>
+						  <li><a href="#">General</a></li>
+						  <li><a href="#">Buttons</a></li>
+					  </ul> -->
+						<li class="lastchild" ng-click="resizeMenu()" id="lastchild">
+							<i class="fas fa-angle-double-left"></i>
+						</li>
+					</ul>
+					<!-- <div class="resize">
+						<p style="color:black;">Close </p>
+					</div> -->
+				</div>
+			</div>
+
+		</div>
+		<div class="contentcontainer col-xs-12" id="contentcontainer">
+			<div class="row">
+				<div class="col-md-12 col-xs-12" ng-show="showList[0]">
+					<h3 class="nameattribute">Create</h3>
+					<hr>
+
+					<!-- <span class="nameattribute">Status: </span><span>{{thisNamespace.status}}</span> -->
+				</div>
+		</div>
+		<div class="contentcontainer col-xs-12" id="contentcontainer">
+				<div class="col-xs-2" >
+						<button ng-click="cancel()" type="button" data-dismiss="modal" aria-label="Close">
+								<i class="zmdi zmdi-library"> <span>Quickstart Templates</span> </i>
+							</button>
+				</div>
+				<div class="col-xs-2" >
+						<button ng-click="cancel()" type="button"  data-dismiss="modal" aria-label="Close">
+								<i class="zmdi zmdi-fire"> <span>Create Action</span> </i>
+							</button>
+				</div>
+				<div class="col-xs-2" >
+						<button ng-click="cancel()" type="button"data-dismiss="modal" aria-label="Close">
+								<i class="zmdi zmdi-book"> <span>Create Sequence</span> </i>
+							</button>
+				</div>
+				<div class="col-xs-2" >
+<button ng-click="cancel()" type="button"  data-dismiss="modal" aria-label="Close">
+						<i class="zmdi zmdi-flash"> <span>Create Trigger</span> </i>
+					</button>
+				</div>
+				<div class="col-xs-2" >
+					<button ng-click="cancel()" type="button"  data-dismiss="modal" aria-label="Close">
+						<i class="zmdi zmdi-fire"> <span>Installing Packages</span> </i>
+					</button>
+				</div>
+				
+					
+					
+					
+					
+		</div>
+		
+	</div>
+
+
+
+
+
+
+</div>

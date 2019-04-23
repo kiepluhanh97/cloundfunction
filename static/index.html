@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="theApp">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="cache-control" content="max-age=0">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
+  <meta http-equiv="pragma" content="no-cache">
+  <!-- <title>Device management IoT </title> -->
+  
+
+
+  <!-- Jquery -->
+  <script src="/static/v2/assets/lamdt/js/jquery.min.js"></script>
+  <script src="/static/v2/assets/lamdt/js/jquery.min.3.3.1.js"></script>
+
+
+  <!-- code mirror -->
+  <link rel="stylesheet" type="text/css" href="/static/v2/assets/codemirror/docs.css">
+  <link rel="stylesheet" type="text/css" href="/static/v2/assets/codemirror/codemirror.css">
+  <link rel="stylesheet" type="text/css" href="/static/v2/assets/codemirror/elegant.css">
+
+  <script src="/static/v2/assets/codemirror/codemirror.js"></script>
+  <script src="/static/v2/assets/codemirror/matchbrackets.js"></script>
+  <script src="/static/v2/assets/codemirror/go.js"></script>
+
+  <!-- Bootstrap -->
+
+  <link rel="stylesheet" href="/static/v2/assets/lamdt/css/material-design-iconic-font.min.css">
+  <link href="/static/v2/assets/lamdt/css/bootstrap.min.css" rel="stylesheet">
+  <script src="/static/v2/assets/lamdt/js/bootstrap.min.js?v=15523598587"></script>
+
+  <script src="/static/v2/assets/lamdt/js/default.js?v=15523598587"></script>
+
+
+  <!-- Font Awesome -->
+  <link href="/static/v2/assets/font-awesome/css/all.css" rel="stylesheet">
+
+  <!-- css custom -->
+  <link href="/static/v2/assets/lamdt/css/styles.css?v=15523598587" rel="stylesheet">
+
+
+  <!-- Angular -->
+  <script src="/static/v2/assets/js/angular.min_1.5.8.js?v=15523598587"></script>
+  <script src="/static/v2/assets/js/angular-route.min.js?v=15523598587" type="text/javascript"></script>
+  <script src="/static/v2/assets/js/angular-ui-router.js?v=15523598587" type="text/javascript"></script>
+  <!-- Bootstrap ui -->
+  <script src="/static/v2/assets/js/ui-bootstrap-tpls-2.2.0.min.js?v=15523598587" type="text/javascript"></script>
+
+  <script src="/static/v2/assets/js/tableHeadFixer.js?v=1234567810" type="text/javascript"></script>
+
+
+  <script src="/static/v2/assets/moment/min/moment.min.js"></script>
+  <script src="/static/v2/assets/js/ui-calendar.js?v=15523598587" type="text/javascript"></script>
+  <!--<script src="/static/v2/assets/js/datatimepicker.js?v=15523598587" type="text/javascript"></script>           -->
+  <script src="/static/v2/assets/js/angular-locale_vi.js?v=15523598587" type="text/javascript"></script>
+  <script src="/static/v2/assets/js/angular-cookies-1.5.5.min.js?v=15523598587" type="text/javascript"></script>
+  <script src="/static/v2/assets/js/angular-animate.min.js?v=15523598587" type="text/javascript"></script>
+  <script src="/static/v2/assets/lamdt/js/daterangepicker.js?v=15523598587" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="/static/v2/assets/lamdt/css/daterangepicker.css?v=15523598587" />
+
+  <script src="/static/v2/assets/bootstrap-datetimepicker-master/build/js/bootstrap-datetimepicker.min.js?v=15523598587" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="/static/v2/assets/bootstrap-datetimepicker-master/build/css/bootstrap-datetimepicker.min.css?v=15523598587" />
+
+  <script src="/static/v2/assets/js/base64.min.js?v=15523598587" type="text/javascript"></script>
+
+  <link rel="shortcut icon" href="/static/v2/assets/lamdt/images/iot-hub-logo.png" />
+
+  <script src="/static/v2/app.js?v=15523598587"></script>
+
+
+  <script src="/static/v2/assets/js/angularjs-dropdown-multiselect.js?v=15523598587"> </script>
+
+  <script src="/static/v2/sidebar/sidebar.controller.js?v=15523598587 "></script>
+  <script src="/static/v2/navigation/navigation.controller.js?v=15523598587"></script>
+  <script src="/static/v2/navigation/navigation.service.js?v=15523598587"></script>
+  <script src="/static/v2/leftmenu/leftmenu.controller.js?v=15523598587"></script>
+
+  <script src="/static/v2/popups/popupconfirm.controller.js?v=15523598587"></script>
+  <script src="/static/v2/popups/popupalert.controller.js?v=15523598587"></script>
+
+  <script src="/static/v2/home/home.controller.js?v=15523598587" type="text/javascript"></script>
+
+  <script src="/static/v2/login/login.controller.js?v=15523598587" type="text/javascript"></script>
+  <script src="/static/v2/login/login.service.js?v=15523598587" type="text/javascript"></script>
+
+  <script src="/static/v2/space/space.controller.js?v=15523598587" type="text/javascript"></script>
+  <script src="/static/v2/space/space.service.js?v=15523598587" type="text/javascript"></script>
+
+  <script src="/static/v2/space_detail/space_detail.controller.js?v=15523598587" type="text/javascript"></script>
+  <script src="/static/v2/space_detail/space_detail.service.js?v=15523598587" type="text/javascript"></script>
+
+  <script src="/static/v2/space_action/space_action.controller.js?v=15523598587" type="text/javascript"></script>
+  <script src="/static/v2/space_action/space_action.service.js?v=15523598587" type="text/javascript"></script>
+
+  <script src="/static/v2/space_trigger/space_trigger.controller.js?v=15523598587" type="text/javascript"></script>
+  <script src="/static/v2/space_trigger/space_trigger.service.js?v=15523598587" type="text/javascript"></script>
+
+  <script src="/static/v2/space_trigger_detail/space_trigger_detail.controller.js?v=15523598587" type="text/javascript"></script>
+  <script src="/static/v2/space_trigger_detail/space_trigger_detail.service.js?v=15523598587" type="text/javascript"></script>
+
+  <script src="/static/v2/space_sequence_detail/space_sequence_detail.controller.js?v=15523598587" type="text/javascript"></script>
+  <script src="/static/v2/space_sequence_detail/space_sequence_detail.service.js?v=15523598587" type="text/javascript"></script>
+
+  <script src="/static/v2/space_package/space_package.service.js?v=15523598587" type="text/javascript"></script>
+  <script src="/static/v2/create_action/create_action.controller.js?v=15523598587" type="text/javascript"></script>
+
+  <script src="/static/v2/create_sequence/create_sequence.controller.js?v=15523598587" type="text/javascript"></script>
+  
+  <script src="/static/v2/rules/rules.service.js?v=15523598587" type="text/javascript"></script>
+  
+
+  <script src="/static/v2/space_dashboard/space_dashboard.controller.js?v=15523598587" type="text/javascript"></script>
+  <script src="/static/v2/space_dashboard/space_dashboard.service.js?v=15523598587" type="text/javascript"></script>
+
+  <script src="/static/v2/code_function/code_function.controller.js?v=15523598587" type="text/javascript"></script>
+  <script src="/static/v2/code_function/code_function.service.js?v=15523598587" type="text/javascript"></script>
+  
+
+  <script src="/static/v2/common/websocket.service.js?v=15523598587?v=15523598587" type="text/javascript"></script>
+  <script src="/static/v2/common/MessageType.js?v=15523598587?v=15523598587" type="text/javascript"></script>
+  <script src="/static/v2/common/codeSample.js?v=15523598587?v=15523598587" type="text/javascript"></script>
+  <script src="/static/v2/assets/js/time-ago/timeago.min.js?v=15523598587" type="text/javascript"></script>
+  <script src="/static/v2/assets/js/time-ago/timeago.locales.min.js?v=15523598587" type="text/javascript"></script>
+
+  <script src="/static/v2/documents/common.controller.js?v=15523598587" type="text/javascript"></script>
+  
+  <!-- css custom -->
+  <link href="/static/v2/assets/lamdt/css/mycss.css?v=15266370564" rel="stylesheet">
+  <!-- <script src="/static/v2/assets/js/map/OpenLayers.js?v=15266370564" type="text/javascript"></script> -->
+
+</head>
+
+<body class="nav-md">
+  <div ng-view class="backgroud"></div>
+</body>
+
+</html>

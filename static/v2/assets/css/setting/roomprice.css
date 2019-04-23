@@ -1,0 +1,248 @@
+.price_1{
+    background: #F3F781;
+}
+.price_2{
+    background: #F3E2A9;
+}
+.price_3{
+    background: #F5D0A9;
+}
+.price_4{
+    background: #F79F81;
+}
+.price_5{
+    background: #FA8258;
+}
+.price_6{
+    background: #FE642E;
+}
+.price_7{
+    background: #FE9A2E;
+}
+.price_8{
+    background: #D7DF01;
+}
+.price_9{
+    background: #DBA901;
+}
+.price_10{
+    background: #AEB404;
+}
+.price_11{
+    background: #BEF781;
+}
+
+table.time{
+    table-layout: fixed;
+}
+
+tr.even{
+    height: 50px;
+    /* max-height: 50px; */
+}
+
+
+div#roomslist label{
+    display: block;
+    margin-bottom: 5px;   
+    float: left;
+    width: 135px;
+    margin-left:0px;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+div#roomlist label input[type='checkbox']{
+    margin-left:-18px;        
+}
+
+div#floorlist label, div#seatlist label{
+    display: block;
+    margin-bottom: 5px;   
+    float: left;
+    width: 90px;
+    margin-left:0px;    
+}
+
+label.mycheckbox input[type='checkbox']{
+    margin-top:2px;
+}
+
+@-moz-document url-prefix() {
+    label.mycheckbox input[type='checkbox']{
+        margin-top:1px;
+    }
+}
+
+
+table.time>tbody>tr>td{
+    /*background: red;*/
+}
+
+
+table.time>thead>tr:first-child>th {
+    /*background: greenyellow;*/
+    min-width: 40px;   
+    font-size: 11px;
+
+
+}
+
+table.time>thead>tr:first-child>half.th {
+    /*border: antiquewhite 1px;*/
+
+}
+
+
+.selected {
+    background: #05b721 !important;
+}
+
+.table_title {
+    min-width: 100px;
+    width: 100px;
+    text-align: center;
+    border-right: 1px solid #ddd;
+}
+
+div#timetable table>tbody>tr>td{
+    padding: 0;
+}
+
+table.time > td{
+    width: 35px;
+}
+
+td.roomnametimetable{   
+    padding-right: 2px;
+    width:100px;
+    /*white-space: nowrap;    */
+    text-align: center;        
+    border-right: #ddd;
+    border-right-style: solid;
+    border-width: 1px;
+}
+div.roomname {
+    max-height: 30px;
+    text-align: left;
+    padding-left: 2px;
+    overflow: hidden;
+}
+div.roomname > a{
+    font-size: 12px;    
+}
+
+table.border > tbody > tr{
+    border: 1px solid #ddd;
+}
+table.time{
+    table-layout: fixed;
+}
+
+th.time_title.roomname{
+    width: 120px;    
+}
+
+th.time_title{
+    background: #ddd !important;
+    color: black;
+    border-left: solid;  
+    border-color: azure;  
+    border-width: 1px;
+}
+
+th.time_title.half{
+    border-left-style: initial;
+}
+
+td.eventroom{
+    border-left-style: solid;
+    border-left-color: #ddd;
+    border-left-width: 1px;
+
+}
+
+li.guestitem {
+    border-radius: 5px;
+    border: 1px solid #ddd; 
+    max-width: 175px;
+    margin-left: 10px !important;
+}
+
+li.guestitem > a {
+    display: inline-block;
+    max-width: 109px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: -5px;
+
+}
+
+li.guestitem >i.fa-close {
+    padding-left: 5px;
+}
+
+.highlight.changebg {  
+    -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: changeBg 1s;
+}
+
+
+tr.even{
+    height: 30px;
+    max-height: 30px;
+
+}
+
+div.event{    
+    background-color: bisque;
+    border-left-style: solid;
+    border-left-color: #ddd;
+    border-left-width: 1px;
+}
+
+div.eventtime{
+    cursor: pointer;
+}
+
+div.roomnote{
+    width:400px; 
+    margin: 0px;
+}
+div.roomnote > p{    
+    float: left;
+    white-space: nowrap;    
+    margin: 0;
+    line-height: 28px;
+    width: 200px;
+}
+div.roomnote > p > i{
+    margin-right: 8px;
+    font-size: 17px;
+    float: left;
+    width: 18px;
+    line-height: 28px;
+}
+
+div.blocktimenormal{
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    width: 100%;
+    max-height: 50px;
+    height: 50px;
+    border-left-style: solid;
+    border-left-color: #ddd;
+    border-left-width: 1px;
+    background-color: #eee;   
+
+}
+
+/* Standard syntax */
+@keyframes changeBg {
+    0%   {background: yellow;}
+    50%  {background: yellow;}    
+    100% {background: yellow;}
+}
+

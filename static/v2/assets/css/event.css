@@ -1,0 +1,180 @@
+
+div#roomslist label{
+    display: block;
+    margin-bottom: 5px;   
+    float: left;
+    width: 135px;
+    margin-left:0px;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+div#roomlist label input[type='checkbox']{
+    margin-left:-18px;        
+}
+
+div#floorlist label, div#seatlist label{
+    display: block;
+    margin-bottom: 5px;   
+    float: left;
+    width: 90px;
+    margin-left:0px;    
+}
+
+label.mycheckbox input[type='checkbox']{
+    margin-top:2px;
+}
+
+span.guestlist {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 5px;
+    padding: 2px;
+}
+
+
+div#guestlist label{
+    display: block;
+    margin-bottom: 5px;   
+    float: left;
+    max-width: 150px;
+    margin-left:0px;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 5px;
+}
+
+
+@-moz-document url-prefix() {
+    label.mycheckbox input[type='checkbox']{
+        margin-top:1px;
+    }
+
+}
+
+table.time>thead>tr:first-child>th {
+    /*background: greenyellow;*/
+    min-width: 45px;    
+}
+
+table.time {
+    table-layout: fixed;
+}
+
+
+div.blocktimenormal{
+    height: 35px;
+    background-color: #fcf8e3;
+    border-left-style: solid;
+    border-left-color: #ddd;
+    border-left-width: 1px;
+    cursor: pointer;
+}
+
+div.blocktimeovertime{
+    height: 35px;
+    background-color: #eee;
+    border-left-style: solid;
+    border-left-color: #ddd;
+    border-left-width: 1px;    
+}
+
+
+div.blocktimebusy{
+    height: 35px;
+    background-color: red;
+    border-left-style: solid;
+    border-left-color: #ddd;
+    border-left-width: 1px;    
+}
+
+.selected {
+    background: #05b721 !important;
+}
+
+.table_title {
+    min-width: 100px;
+    width: 100px;
+    text-align: center;
+    border-right: 1px solid #ddd;
+}
+
+
+div#timetable table>tbody>tr>td{
+    padding: 0;
+}
+
+th.time_title.roomname{
+    width: 120px;
+}
+
+td.roomnametimetable{
+    padding-right: 2px;
+    width:100px;
+    /*white-space: nowrap;    */
+    text-align: center;        
+    border-right: #ddd;
+    border-right-style: solid;
+    border-width: 1px;
+}
+
+div.roomname {
+    max-height:35px;
+    text-align: left;
+    padding-left: 2px;
+    overflow: hidden;
+}
+div.roomname > a{
+    font-size: 12px;    
+}
+
+table.border > tbody > tr{
+    border: 1px solid #ddd;
+}
+
+
+th.time_title{
+    background: #ddd !important;
+    color: black;
+    border-left: solid;  
+    border-color: azure;  
+    border-width: 1px;
+}
+
+th.time_title.half{
+    border-left-style: initial;
+}
+
+li.guestitem {
+    border-radius: 5px;
+    border: 1px solid #ddd; 
+    max-width: 175px;
+    margin-left: 10px !important;
+}
+
+li.guestitem > a {
+    display: inline-block;
+    max-width: 109px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: -5px;
+
+}
+
+li.guestitem >i.fa-close {
+    padding-left: 5px;
+}
+
+.highlight.changebg {  
+    -webkit-animation: mymove 5s infinite; /* Safari 4.0 - 8.0 */
+    animation: changeBg 1s;
+}
+
+/* Standard syntax */
+@keyframes changeBg {
+    0%   {background: yellow;}
+    50%  {background: yellow;}    
+    100% {background: yellow;}
+}

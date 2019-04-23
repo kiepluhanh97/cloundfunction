@@ -1,0 +1,151 @@
+<div class="container-fluid">
+	<div class="row">
+		<div ng-include="'/static/' + uiver + '/navigation/navigation.view.html?v=' + ver"
+			ng-controller='NavigationController'>
+		</div>
+	</div>
+	<div class="row">
+		<div class="title-bar">
+			<a href="#spaceaction" style="display:-webkit-box; cursor: pointer;">
+				<span class="title-text">Actions</span>
+			</a>
+
+			<!-- <div class="btn-group menu-action">
+				<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+					<span style="font-weight:700 !important;">Action</span>
+					<span class="caret"></span>
+					<span class="sr-only">Toggle Dropdown</span>
+				</button>
+				<ul class="dropdown-menu actiondetail" role="menu" style="margin-left: -80px;">
+					<li ng-class="statusCert=='ACTIVE'||statusCert=='REVOKED' ? 'disableClick':''"><a
+							ng-click="updateCert(cert,1)">Rename</a></li>
+					<li ng-class="statusCert=='INACTIVE'||statusCert=='REVOKED' ? 'disableClick':''"> <a
+							ng-click="updateCert(cert,0)">Block</a></li>
+					<li ng-class="statusCert=='REVOKED'?'disableClick':''"><a ng-click="updateCert(cert,2)">Active</a>
+					</li>
+					<li><a ng-click="attachPolicies(cert)">Delete</a></li>
+				</ul>
+			</div> -->
+			<!-- <div class="over-margin maps"></div> -->
+			<!-- <a style="cursor: pointer;" ng-click="autoAddNewVariable()" class="btnAdd" ng-show="viewVar">+</a> -->
+		</div>
+	</div>
+	<div class="row">
+		<div ng-include="'/static/' + uiver + '/leftmenu/leftmenu.view.html?v=' + ver" ng-controller='LeftMenuController'>
+		</div>
+		
+		<div class="contentcontainer col-xs-12" id="contentcontainer">
+			<div class="row">
+				<div class="col-xs-12">
+					<h3 class="nameattribute">Actions</h3>
+					<p>Actions contain your function code and are invoked by events or REST API call</p>
+					<hr>
+					<form class="form-inline col-md-9 col-xs-12">
+						<i class="fa fa-search" aria-hidden="true"></i>
+						<input type="text" placeholder="Search Actions" aria-label="Search" ng-model="searchtext.data.name" ng-change ="changeSearch()">
+					</form>
+					<a href="#createoptions"><button class="btn btn-primary col-xs-2 btn-createaction">Create</button></a>
+					<br><br><br><br>
+					<div ng-repeat = "package in listObjActionShow | filter:searchtext" >
+						<div class="actioncontent"  ng-click="resizeTable($index)">
+							<div class="title-table col-md-12 col-xs-12">
+								<i class="fas fa-chevron-down" ng-hide = "listPkShow[$index]"></i>
+								<i class="fas fa-chevron-right"  ng-show = "listPkShow[$index]"></i>
+								<span class="table">{{package.package}}</span>
+								<i class="far fa-question-circle"
+									title="These actions are not contained in any of the own or bound packages" ng-click ="$event.stopPropagation()"></i>
+								<i ng-show="package.showMenu" style="float:right"  >
+										<div class="btn-group">
+												<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+													<span class="caret"></span>
+													<span class="sr-only">Toggle Dropdown</span>
+												</button>
+												<ul  class="dropdown-menu" role="menu" style="margin-left:-150px;">
+													<li><a onmouseover = "this.style.backgroundColor='red';" onmouseout = "this.style.backgroundColor='white';"  ng-click="deletePackage(package);$event.stopPropagation()" >Delete Package</a></li>
+												</ul>
+											</div>
+								</i>
+							</div>
+						</div>
+						<div class="tablepaging col-xs-12" ng-hide = "listPkShow[$index]">
+							<div class="left">
+								<select style="color: black;" ng-model="package.itemPerPage" name="itemPerPage"
+									ng-options="item + ' items per page' for item in itemByPageList"
+									ng-change="updatePagingPackage2($index,package.itemPerPage)"></select>
+								<span>|</span>
+								<span>{{(package.pageTh-1)*package.itemPerPage +1}}-{{package.pageTh*package.itemPerPage>package.totalItem?package.totalItem:package.pageTh*package.itemPerPage}} of {{package.totalItem}} items</span>
+							</div>
+							<div class="right">
+								<span>{{package.pageTh}} of {{package.totalPages}} pages</span>
+								<span>|</span>
+								<span>
+									<i class="fas fa-chevron-left" style="color:#3d70b2; cursor: pointer;" ng-class="package.pageTh == 1?'disable-click':''" ng-click = "updatePagingPackage($index,package.pageTh-1,package.itemPerPage)"></i>   
+											{{package.pageTh}}   
+									<i class="fas fa-chevron-right" style="color:#3d70b2; cursor: pointer;" ng-class="package.pageTh*package.itemPerPage>=package.totalItem?'disable-click':''" ng-click = "updatePagingPackage($index,package.pageTh+1,package.itemPerPage)"></i>
+								</span>
+							</div>
+						</div>
+						<table class="tableaction col-xs-12" ng-hide = "listPkShow[$index]">
+							<tr class="header">
+								<th class="col-xs-4"><span>NAME</span></th>
+								<th class="col-xs-2"><span>RUNTIME</span></th>
+								<th class="col-xs-1"><span>MEMORY</span></th>
+								<th class="col-xs-1"><span>TIMEOUT</span></th>
+								<th class="col-xs-2"><span>UPDATED</span></th>
+								<th class="col-xs-2"><span>VERSION</span></th>
+								<th class="col-xs-1"><span></span></th>
+							</tr>
+
+							<tr class="content" ng-repeat = "item in package.data|filter:searchTextIn">
+								<td><a ng-click="manageAction(item)" href="">{{item.name}}</a></td>
+								<td><a href="">{{item.annotations[0].value}}</a></td>
+								<td><a href="">{{item.limits.memory}}</a></td>
+								<td><a href="">{{item.limits.timeout /1000}} s</a></td>
+								<td><a href="">{{item.updatedTime}}</a></td>
+								<td><a href="">{{item.version}}</a></td>
+								<td>
+									<div class="btn-group">
+										<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+											<span class="caret"></span>
+											<span class="sr-only">Toggle Dropdown</span>
+										</button>
+										<ul class="dropdown-menu" role="menu" style="margin-left:-150px;">
+											<li><a ng-click="manageAction(item)">Manage Action</a></li>
+											<li><a ng-click="removeAction(item)" onmouseover = "this.style.backgroundColor='red';" onmouseout = "this.style.backgroundColor='white';"  >Delete Action</a></li>
+										</ul>
+									</div>
+								</td>
+							</tr>
+							
+						</table>
+						<div class="col-xs-12" style="height:40px;"></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+<script type="text/ng-template" id="DeletePackage.html">
+    <div class="modal-header bgColor2" id="title_add_device">
+      <button ng-click="cancel()" type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="zmdi zmdi-close"></i></button>
+      <h3 class="modal-title">Delete Package</h3>
+      <!-- <h3 class="modal-big-title">Add device</h3> -->
+    </div>
+    <div class="modal-body">
+      <p><b>You are about to delete package: {{package_name}} and the following actions:</b></p>
+      
+        <div ng-repeat="item in listAction">
+            <label>{{item.name}}</label>
+        </div>
+    </div>
+    </div>
+    <div class="modal-footer text-center">
+      <div class="row">
+        <div class="col-xs-6"><a ng-click="cancel()" class="btn w100p btn-sub-border btn-lg" data-dismiss="modal">Cancel</a></div>
+        <div class="col-xs-6"><a ng-click="save()" ng-disabled="bInvalidName" class="btn w100p btn-sub btn-lg" data-dismiss="modal" id="button_add_new">Delete</a></div>
+      </div>
+    </div>
+  </script>

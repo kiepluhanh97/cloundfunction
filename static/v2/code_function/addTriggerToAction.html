@@ -1,0 +1,86 @@
+
+
+    <div class="modal-header bgColor2" id="title_add_device">
+      <button ng-click="cancel()" type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="zmdi zmdi-close"></i></button>
+      <h3 class="modal-title">Add Trigger</h3>
+      <!-- <h3 class="modal-big-title">Add device</h3> -->
+    </div>
+    <div class="tab">
+            <button style="display=true" class="tablinks" ng-click="selectAction($event, 'createnew')">Create New</button>
+            <button class="tablinks" ng-click="selectAction($event, 'selectexisting')">Select Existing</button>
+    </div>
+
+    <div id="createnew" class="tabcontent"  class="w3-container city" style="display:block">
+       
+        <div  class="form-group col-md-9 col-xs-12" style="padding:0;margin:0;    margin-top: 7px;">
+            <label for="nameaction">Trigger Name</label>
+            <input type="text" class="form-control" id="nameaction" ng-change="checkValidTriggerName()" ng-model="trigger_name">
+            <span style="color: red" ng-show="bDuplicateName">An trigger by this name already exists.</span>
+            <span style="color: red" ng-show="bInvalidName">Trigger names must start with a letter, digit, or underscore and be followed by the same or @, ,., and -.
+                </span>
+        </div>
+    
+        <div style="float:right;margin-top:26px">
+                <button ng-class = "actionname==''? 'disableClick':''" class="btn btn-primary" 
+                style="border-radius:2px;width:167px !important; height: 40px !important;"
+                 ng-click = "createTriggerAndConect()">Create & Connect</button>
+        </div>
+    </div>
+    <div id="selectexisting" class="tabcontent" >
+            <h3>Trigger List: ( {{listTrigger.length}} )</h3>
+        <select style="cursor: pointer;" size="1" name="table-volumes_length" class="form-control form-control-inline"
+            ng-model="selectedTrigger" ng-options="item.name for item in listTrigger track by item.name" > 
+            <option value="">Select an Trigger...</option>
+        </select>
+        <br>
+    </div>
+    </div>
+    <div class="modal-footer text-center" >
+      <div ng-show="showBTNAct" class="row">
+        <div  class="col-xs-6"><a ng-click="cancel()" class="btn w100p btn-sub-border btn-lg" data-dismiss="modal">Cancel</a></div>
+        <div class="col-xs-6"><a ng-click="save()" class="btn w100p btn-sub btn-lg" data-dismiss="modal" id="button_add_new">Connect</a></div>
+      </div>
+    </div>
+
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>

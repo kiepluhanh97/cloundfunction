@@ -1,0 +1,80 @@
+<div class="container-fluid">
+    <div class="row">
+        <div ng-include="'/static/' + uiver + '/navigation/navigation.view.html?v=' + ver"
+            ng-controller='NavigationController'>
+        </div>
+    </div>
+    <div class="row">
+        <div class="title-bar">
+            <a style="display:-webkit-box; cursor: pointer;">
+
+                <span class="title-text">Space/ {{spaceName}} / Pricing</span>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div ng-include="'/static/' + uiver + '/leftmenu/leftmenu.view.html?v=' + ver"
+            ng-controller='LeftMenuController'>
+        </div>
+        <div class="contentcontainer col-xs-12" id="contentcontainer">
+            <div>
+                <div class="row">
+                    <div class="col-md-10 col-xs-10">
+                        <h1 class="nameattribute">Cloud Functions Pricing</h1>
+                    </div>
+                    <div class="col-md-2 col-xs-2" style="    padding-top: 37px;">
+                        <a href="#createoptions" role="button" style="background-color: #3d70b2;
+                            border: 12px solid transparent;
+                            color: #ffffff;
+                            margin-top: 55px;    color: white !important;">Start Creating</a>
+                    </div>
+                </div>
+
+                <div style="    margin-top: 0.625rem;">
+                    <p class="p1">Cloud Functions is different from traditional computing technologies, you only pay for the time your code is satisfying requests, rounded up to the nearest 100ms. This means that you may be able to see considerable cost savings relative to other technologies like VMs and containers, which are likely not being 100% utilized while they continue to take up memory on your cloud provider's system.</p>
+                </div>
+
+
+                <div>
+                    <h4 class="nameattribute">Basic Cloud Functions Rate:</h4>
+                </div>
+                <div><p class="p1" style="    background-color: white;
+                    padding: 6px 7px;
+                    border: 1px solid #5596e6;
+                    max-width: 40rem;">
+                       <strong> 0.1đ </strong> per second of execution, per GB of memory allocated.
+                </p>
+                </div>
+                <div style="  ">
+                    <h4 class="nameattribute">How does it work?</h4>
+                </div>
+                <div class="col-xs-12">
+                    <p class="p1">Cloud Functions is billed per second per gigabyte of memory. This means you can further reduce your costs by only allocating as much memory as is needed for your functions to do their job.
+                                See Runtime page of your actions under the Actions tab.
+                    </p>
+                   
+                </div>
+
+                <div style=" margin-top: 20px ">
+                    <h4 class="nameattribute">Example Monthly Costs</h4>
+                    <p class="p1">Cloud Functions is efficient when both highly utilized (scaling seamlessly to 10,000+ parallel requests), and when used only periodically (once a week).</p>
+                </div>
+               
+                </div>
+                <hr>
+               
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+<style>
+    .p1 {
+        color: black;
+        font-weight: 500;
+    }
+</style>

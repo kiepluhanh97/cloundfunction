@@ -1,0 +1,95 @@
+
+div#roomslist label{
+    display: block;
+    margin-bottom: 5px;   
+    float: left;
+    width: 135px;
+    margin-left:0px;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+div#roomlist label input[type='checkbox']{
+    margin-left:-18px;        
+}
+
+div#floorlist label, div#seatlist label{
+    display: block;
+    margin-bottom: 5px;   
+    float: left;
+    width: 90px;
+    margin-left:0px;    
+}
+
+label.mycheckbox input[type='checkbox']{
+    margin-top:2px;
+}
+
+@-moz-document url-prefix() {
+    label.mycheckbox input[type='checkbox']{
+        margin-top:1px;
+    }
+
+}
+
+
+
+.selected {
+    background: #05b721 !important;
+}
+
+.table_title {
+    min-width: 100px;
+    width: 100px;
+    text-align: center;
+    border-right: 1px solid #ddd;
+}
+
+div#timetable table>tbody>tr>td{
+    padding: 0;
+}
+
+td.roomnametimetable{
+    padding-right: 5px !important;
+}
+
+table > tbody > tr{
+    border: 1px solid #ddd;
+}
+
+th.time_title{
+    background: #ddd;
+    color: black;
+    border: solid;  
+    border-color: azure;  
+    border-width: 1px;
+}
+
+li.guestitem {
+    border-radius: 5px;
+    border: 1px solid #ddd; 
+    max-width: 170px;
+    margin-left: 10px !important;
+    padding-right: 10px;
+}
+
+li.guestitem > a {
+    display: inline-block;
+    max-width: 109px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: -5px;
+
+}
+
+li.guestitem >i.fa-close {
+    padding-left: 5px;
+}
+
+span.guestlist {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 5px;
+    padding: 2px;
+}

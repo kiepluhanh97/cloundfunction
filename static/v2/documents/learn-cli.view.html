@@ -1,0 +1,91 @@
+<div class="container-fluid">
+    <div class="row">
+        <div ng-include="'/static/' + uiver + '/navigation/navigation.view.html?v=' + ver"
+            ng-controller='NavigationController'>
+        </div>
+    </div>
+    <div class="row">
+        <div class="title-bar">
+            <a style="display:-webkit-box; cursor: pointer;">
+
+                <span class="title-text">Space/ {{spaceName}} / CLI</span>
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div ng-include="'/static/' + uiver + '/leftmenu/leftmenu.view.html?v=' + ver"
+            ng-controller='LeftMenuController'>
+        </div>
+        <div class="contentcontainer col-xs-12" id="contentcontainer">
+            <div>
+                <div class="row">
+                    <div class="col-md-10 col-xs-10">
+                        <h1 class="nameattribute">Setting up the Cloud Functions CLI</h1>
+                    </div>
+                    <div class="col-md-2 col-xs-2" style="    padding-top: 37px;">
+                        <a href="#createoptions" role="button" style="background-color: #3d70b2;
+                            border: 12px solid transparent;
+                            color: #ffffff;
+                            margin-top: 55px;    color: white !important;">Start Creating</a>
+                    </div>
+                </div>
+
+                <div style="    margin-top: 0.625rem;">
+                    <p class="p1">To use the Cloud Functions CLI (Command Line Interface), follow these steps.</p>
+                </div>
+                <div class="col-xs-12">
+                    <p class="p1"><strong>1. Download </strong>
+                    </p>
+                    <p class="p1">Download and install the <a
+                            href="https://github.com/apache/incubator-openwhisk-cli/releases/"
+                            taget="_blank">OpenWhisk CLI</a>.
+                    </p>
+                </div>
+                <div class="col-xs-12" style=" margin-top: 20px ">
+                        <p class="p1"><strong>2. Extract </strong>
+                        </p>
+                        <p class="p1">Extract the downloaded file to OpenWhisk_CLI-latest-linux-amd64 folder</p>
+                </div>
+                <div class="col-xs-12" style=" margin-top: 20px ">
+                        <p class="p1"><strong>3. Configure Host and Authentication </strong>
+                        </p>
+                        <p class="p1">
+                                Set API Host: <div style="background-color: #f4f7fc;
+                                border: 1px solid #dfe6eb;"><code>./wsk property set --apihost {{APIHOST}} </code></div><br>
+                                Set Authentication:<div style="background-color: #f4f7fc;
+                                border: 1px solid #dfe6eb;"> <code>./wsk property set --auth <a href="#learn-api-key" target="_blank">API Key</a></code></div>
+                        </p>
+                </div>
+                <div class="col-xs-12" style=" margin-top: 20px ">
+                        <p class="p1"><strong>4. Test It</strong>
+                        </p>
+                        <p class="p1">
+                                Verify your setup. Here, we perform a blocking (synchronous) invocation of echo, passing it "hello" as an argument.<br>
+                                <div style="background-color: #f4f7fc;
+                                border: 1px solid #dfe6eb;"><code>./wsk -i action invoke /whisk.system/utils/echo -p message hello --result</code></div>
+                                <p>Result:</p>
+                                <div style="background-color: #f4f7fc;
+                                border: 1px solid #dfe6eb;"> <code>
+                                    { "message": "hello"}
+                                </code></div>
+                        </p>    
+                </div>
+                    
+                </div>
+                <hr>
+             
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+<style>
+    .p1 {
+        color: black;
+        font-weight: 500;
+    }
+</style>

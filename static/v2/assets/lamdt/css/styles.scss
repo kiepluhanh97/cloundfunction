@@ -1,0 +1,329 @@
+@import "_common.scss";
+
+.navbar-nav>li>a {
+	border:1px solid transparent;
+	&.special {
+		@media (min-width:767px) {
+			color:$main-color!important;
+			border:1px solid $main-color;
+			border-radius: 999px;
+		}
+	}
+}
+
+.big-title {
+	font-size: 36px;
+	font-weight: 300;
+	line-height: 42px;
+	color:$title-text-color;
+	span {
+		color:$main-color;
+	}
+}
+
+.medium-title {
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 30px;
+	color:$title-text-color;
+}
+
+label.title {
+	font-size: 12px;
+	font-weight: bold;
+	color:$title-text-color;
+}
+
+.dropdown-toggle i.zmdi {
+	line-height: 0;
+	position: relative;
+	top:5px;
+}
+
+.title-bar {
+	background-color: #3E4650;
+	padding:10px 20px;
+	margin:0 -20px;
+	span.title-text {
+		font-size:24px;
+		font-weight: 300;
+		color:white;
+	}
+
+	position:relative;
+	.btnAdd {
+		position:absolute;
+		right:20px;
+		bottom:-25px;
+		width:50px;
+		height:50px;
+		display: block;
+		overflow: hidden;
+		
+		text-align: center;
+		background-color:$main-color;
+		border-radius: 999px;
+		color:white!important;
+		font-size:30px;
+		font-weight: 300;
+		line-height: 0;
+		padding-top:25px;
+		
+		text-decoration: none!important;
+	}
+	
+	a * {color:white!important;}
+}
+
+
+@keyframes fadeIn { 
+  from { opacity: 0; } 
+}
+
+.animate-flicker {
+    animation: fadeIn 2s infinite alternate;
+}
+
+
+
+.inline-textbox {
+	.hidden-input {
+		display:none;
+		.buttons {margin-top:10px;}
+	}
+}
+
+.box {
+	display:block;
+	margin-bottom:30px;
+	border-radius: 4px;
+	background-color: white;
+	
+	height: 235px;
+	&.auto-height {
+		height: auto;
+	}
+	
+	-webkit-box-shadow: 0px 6px 20px 0px rgba(0,0,0,0.06)!important;
+	-moz-box-shadow: 0px 6px 20px 0px rgba(0,0,0,0.06)!important;
+	box-shadow: 0px 6px 20px 0px rgba(0,0,0,0.06)!important;
+	
+	.actions {
+		visibility: hidden;
+		padding-top: 5px;
+		a {
+			font-size:20px;
+			opacity: 0.5;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+	
+	&:hover {
+		-webkit-box-shadow: 0px 6px 20px 0px rgba(0,0,0,0.2)!important;
+		-moz-box-shadow: 0px 6px 20px 0px rgba(0,0,0,0.2)!important;
+		box-shadow: 0px 6px 20px 0px rgba(0,0,0,0.2)!important;
+		.actions {
+			visibility: visible;
+		}
+	}
+	
+
+	
+	.box-header {
+		display: block;
+		background-color: $main-color;
+		
+		&.bgcolor2 {
+			background-color:$sub-color;
+		}
+		
+		min-height: 120px;
+		position: relative;
+		border-radius: 4px 4px 0 0;
+		
+		
+		
+		
+		.inline-textbox {
+			input.editable {
+				position:absolute;
+				bottom:8px;
+				width:94%;
+				margin:0 3%;
+				padding:0;
+				color:white;
+				font-size:20px;
+
+				border:2px solid transparent!important;
+				background-color: transparent!important;
+				padding-bottom:2px;
+			}
+			.hidden-input {
+				display:none;
+				bottom:10px;
+				position:absolute;
+				width: 100%;
+				.buttons {
+					margin-top:0;
+				}
+			}
+			
+			&.show {
+				.hidden-input {display:block}
+				input.editable {
+					border-bottom:2px solid white!important;
+					bottom:50px;
+				}
+			}
+		}
+		
+		
+		span {
+			position:absolute;
+			bottom:0;
+			width:100%;
+			padding:10px;
+			color:white;
+			font-size:20px;
+			
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			
+			&.var-name {
+				bottom:40px;
+				font-size:14px!important;
+			}
+			
+			&.var-value {
+				font-size:32px;
+				font-weight: 300;
+			}
+			
+			&.icon {
+				width:auto;
+				padding-bottom:0;
+				bottom:auto;
+				top:0;
+				left:0;
+				i.zmdi {
+					color:rgba(255,255,255,0.5)!important;
+					font-size:24px;
+				}
+			}
+		}
+		
+	}
+	.box-body {
+		padding:10px;
+		font-size:16px;
+		font-weight: 300;
+		.small * {color:#3E4650;}
+		.zmdi-info {color:black; opacity:0.3; font-size:12px!important;}
+		
+	}
+	.box-status {
+		padding:10px;
+		.online {color:green;}
+		.label {font-size: 12px;}
+	}
+	
+	
+	&.add {
+		position:relative;
+		-webkit-box-shadow: none!important;
+		-moz-box-shadow: none!important;
+		box-shadow: none!important;
+		background-color: transparent!important;
+		
+		border:2px dashed #9EAAB3;
+		
+		span.content {
+			display: block;
+			position:absolute;
+			width:100%;
+			text-align: center;
+			top:50%;
+			transform: translateY(-50%);
+			font-size:24px;
+			font-weight: 300;
+		}
+	}
+}
+
+
+
+.over-margin {
+	margin-left:-20px;
+	margin-right:-20px;
+}
+
+.maps {
+	height: 250px;
+	overflow: hidden;
+	background: url(../images/maps.jpg) center no-repeat;
+	background-size: cover;
+}
+
+
+.mt-120 {
+	margin-top:-120px;
+	@media (max-width:992px) {
+		/*margin-top:30px;*/
+	}
+}
+
+
+
+/* TOAST MESSAGES */
+
+#toast-msg {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 100px; /* Set a default minimum width */
+    background-color: white; /* Black background color */
+	border-top:2px solid $main-color;
+    border-radius: 2px; /* Rounded borders */
+    padding: 15px 30px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 20px; /* Center the snackbar */
+    bottom: 20px; /* 30px from the bottom */
+	
+	-webkit-box-shadow: 0 0px 10px rgba(0,0,0,0.2)!important;
+    -moz-box-shadow: 0 0px 10px rgba(0,0,0,0.2)!important;
+    box-shadow: 0 0px 10px rgba(0,0,0,0.2)!important;
+}
+
+/* Show the toast-msg when clicking on a button (class added with JavaScript) */
+#toast-msg.show {
+    visibility: visible; /* Show the snackbar */
+
+/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+
+
+.daterange_control {
+	display: inline-block;
+	width:60%;
+	position: relative;
+	
+	.daterange {
+		width:100%;
+		border-radius: 99px!important;
+	}
+	i.zmdi {
+		position:absolute;
+		right:15px;
+		top:12px;
+		color:$sub-color;
+	}
+}
+
+
+

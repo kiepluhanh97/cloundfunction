@@ -1,0 +1,149 @@
+<div ng-show="!blogin" class="container-fluid header">
+	<nav class="navbar navbar-default">
+		<!-- <div class="container-fluid"> -->
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header" style="background: #34495e00;">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+				    aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/iotbox/#/home">
+					<!-- <img src='/static/' +uiver+ '/assets/lamdt/images/logo_iotbox.svg' alt=""> -->
+					<img src="/static/v2/assets/lamdt/images/vinadata-logo-white.png" style="height: 80%;  width: 50%;    margin-top: 0px;" alt="">
+				</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="#docs">Tài liệu</a>
+					</li>
+					<!-- <li>
+						<a href="#pricing">Giá cả</a>
+					</li> -->
+					<li>
+						<a ng-click="loginpage()" ng-class="{special: bloginpage }"> ĐĂNG NHẬP</a>
+					</li>
+					<li>
+						<a ng-click="registerpage()" ng-class="{special: !bloginpage }">ĐĂNG KÝ</a>
+					</li>
+				</ul>
+			</div>
+			<!-- /.navbar-collapse -->
+		<!-- </div> -->
+		<!-- /.container-fluid -->
+	</nav>
+</div>
+
+<div ng-show="blogin" class="container-fluid header">
+	<nav class="navbar navbar-default">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+			    aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#/">
+				<img src="/static/v2/assets/lamdt/images/vinadata-logo-white.png" style="max-height: 40px;" alt="Vinadata Homepage">
+			</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a href="http://kb.vinadata.vn/display/CSV/IoT+Hub" target="_blank">Documents</a>
+				</li>
+				<!-- <li>
+					<a href="#userinfo" >Setting</a>
+				</li> -->
+				<!-- <li>
+					<a href="#pricing">Giá cả</a>
+				</li> -->
+				<!-- <li ng-show="userType == userRule.admin ? true: false" class="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i ng-hide="true" class="zmdi zmdi-account-circle zmdi-hc-2x mr5"></i>Danh sách hub<span class="caret"></span></a>
+					
+					<ul ng-show="userType == userRule.admin ? true: false" class="dropdown-menu"  ng-repeat="item in listhub">
+						<li ng-show="userType == userRule.admin ? true: false" ><a href="#/admin/device">{{item}}</a></li>
+					</ul>
+				</li> -->
+				
+				<!-- <li class="dropdown" ng-show="showManage">
+					<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<i ng-hide="true" class="zmdi zmdi-account-circle zmdi-hc-2x mr5"></i>Manage
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="#space">Space</a>
+						</li>
+						<li>
+							<a href="#">Actions</a>
+						</li>
+						<li>
+							<a href="#">Triggers</a>
+						</li>
+					
+						<li>
+							<a href="#">Monitors</a>
+						</li>
+						<li>
+							<a href="#">Logs</a>
+						</li>
+						<li>
+							<a href="#">APIs</a>
+						</li>
+						<li>
+							<a href="#">Statistics</a>
+						</li>
+					</ul>
+				</li> -->
+				<li class="dropdown" >
+						<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >
+							<i ng-hide="true" class="zmdi zmdi-account-circle zmdi-hc-2x mr5" data-toggle="tooltip" data-placement="top" title="Namespace List" ></i>{{namespace_selected}}
+							<span class="caret"></span>
+						</a>
+						<ul class="dropdown-menu">
+								<li ng-repeat="item in listNS" ng-class="item == idSelected ? '': 'selected'"><a ng-click="onChangeSubMenuSelected(item)" >{{item}}</a></li>
+						</ul>
+					</li>
+				<!--
+				<li ng-show="userType == userRule.admin ? true: false"><a href="#user" class="link">Tài khoản</a></li>
+				-->
+				<li class="dropdown">
+					<a href="_self" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<i class="zmdi zmdi-account-circle zmdi-hc-2x mr5"></i>{{userName}}
+						<span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu">
+						<!-- <li>
+							<a href="#userinfo">Account</a>
+						</li> -->
+						<!-- <li class="divider"></li> -->
+						<li>
+							<a ng-click="logout()"><span class="glyphicon glyphicon-log-out"></span> Log out </a>
+						</li>
+					</ul>
+				</li>
+
+
+			</ul>
+		</div>
+		<!-- /.navbar-collapse -->
+	</nav>
+</div>
+
+<style>
+	body {
+		background-color: #e5e5e5;
+	}
+</style>

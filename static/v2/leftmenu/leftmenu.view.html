@@ -1,0 +1,59 @@
+		<div class="menucontainer left_col col-menu" id="menucontainer" style="height:100%;z-index:2;">
+			<div class="nav-side-menu" style="height:100%; width:100%;">
+				<div class="brand">Namespace {{thisNamespace.id}}</div>
+				<i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+				<div class="menu-list" style="height:80%; width:100%;">
+					<ul id="menu-content" class="menu-content collapse out">
+						<li data-toggle="collapse" class="collapsed"  ng-class="listchoose[7]==true ? 'selectedinmenu':''" ng-click="opensubmenu1()"> &nbsp; &nbsp;<i class="far fa-folder fa-lg"></i><span> &nbsp; &nbsp; Documents</span><i style="float:right;margin:10px;" class="fas fa-chevron-down"></i>
+						</li>
+						<ul class="sub-menu collapse" id="subleftmenu" ng-show="nowshow1">
+							<a href="#overview" ng-click = "viewSubOverView()"><li style="color: #3d70b2; padding-left: 45px;" ng-class="listchoose[8]==true ? 'selectedinmenu':''">Over view</li></a>
+							<a href="#pricing" ng-click = "viewSubPricing()"><li style="color: #3d70b2; padding-left: 45px;" ng-class="listchoose[9]==true ? 'selectedinmenu':''">Pricing</li></a>
+							<a href="#learn-cli" ng-click = "viewSubCLI()"><li style="color: #3d70b2;	padding-left: 45px;" ng-class="listchoose[10]==true ? 'selectedinmenu':''">CLI</li></a>
+							<a href="#learn-api-key" ng-click = "viewSubAPIKEY()"><li style="color: #3d70b2;	padding-left: 45px;" ng-class="listchoose[11]==true ? 'selectedinmenu':''"> API KEY</li></a>
+						</ul>
+							<!-- <li ng-click="viewDocuments()" id ="docsmenu" ng-class="listchoose[7]==true ? 'selectedinmenu':''">
+									&nbsp &nbsp <i class="fas fa-info-circle fa-lg"></i><span> &nbsp &nbsp Documents</span>
+								</li> -->
+						<li ng-click="viewDetail()" id ="detailsmenu" ng-class="listchoose[0]==true ? 'selectedinmenu':''">
+							&nbsp &nbsp <i class="fas fa-info-circle fa-lg"></i><span> &nbsp &nbsp Details</span>
+						</li>
+
+						<li ng-click="viewAction()" id = "actionmenu" ng-class="listchoose[1]==true ? 'selectedinmenu':''">
+							&nbsp &nbsp <i class="fas fa-hand-point-up fa-lg"></i><span> &nbsp &nbsp Actions</span>
+						</li>
+
+						<li ng-click="viewTrigger()" id ="triggermenu" ng-class="listchoose[2]==true ? 'selectedinmenu':''">
+							&nbsp &nbsp <i class="fas fa-bolt fa-lg"></i><span> &nbsp &nbsp Triggers</span>
+						</li>
+
+						<li ng-click="viewDashBoard()" ng-class="listchoose[3]==true ? 'selectedinmenu':''">
+							&nbsp &nbsp <i class="fas fa-tv fa-lg"></i><span> &nbsp &nbsp Monitors</span>
+						</li>
+
+						<li>
+							&nbsp &nbsp <i class="fas fa-edit fa-lg"></i><span> &nbsp &nbsp Logs</span>
+						</li>
+
+						<li>
+							&nbsp &nbsp <i class="fas fa-link fa-lg"></i><span> &nbsp &nbsp APIs</span>
+						</li>
+
+						<!-- <li  data-toggle="collapse" data-target="#products" class="collapsed" ng-click="show1()">
+						<i class="fa fa-gift fa-lg"></i> UI Elements <span class="arrow"></span>
+					  </li>
+					  <ul class="sub-menu collapse" id="products" ng-show = "notshow1">
+						  <li><a href="#">CSS3 Animation</a></li>
+						  <li><a href="#">General</a></li>
+						  <li><a href="#">Buttons</a></li>
+					  </ul> -->
+					</ul>
+					<!-- <div class="resize">
+						<p style="color:black;">Close </p>
+					</div> -->
+				</div>
+			</div>
+		</div>
+		<div class="lastchild" ng-click="resizeMenu()" id="lastchild">
+				<i class="fas fa-angle-double-left"></i>
+		</div>
