@@ -6,8 +6,6 @@ import (
 	"log"
 	"os"
 	"path/filepath"
-
-	"gopkg.in/natefinch/lumberjack.v2"
 )
 
 var (
