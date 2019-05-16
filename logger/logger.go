@@ -46,7 +46,3 @@ func (log *Logger) Info(v ...interface{}) {
 func (log *Logger) Error(v ...interface{}) {
 	log.write("[ERROR] " + ": " + fmt.Sprintln(v...))
 }
-
-func (log *Logger) Warn(v ...interface{}) {
-	log.write("[WARN] " + ": " + fmt.Sprintln(v...))
-}
